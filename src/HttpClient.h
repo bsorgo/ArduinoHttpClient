@@ -312,6 +312,8 @@ public:
     // Inherited from Client
     virtual int connect(IPAddress ip, uint16_t port) { return iClient->connect(ip, port); };
     virtual int connect(const char *host, uint16_t port) { return iClient->connect(host, port); };
+    virtual int connect(IPAddress ip, uint16_t port, int timeout) { return iClient->connect(ip, port, timeout); };
+    virtual int connect(const char *host, uint16_t port, int timeout) { return iClient->connect(host, port, timeout); };
     virtual void stop();
     virtual uint8_t connected() { return iClient->connected(); };
     virtual operator bool() { return bool(iClient); };
